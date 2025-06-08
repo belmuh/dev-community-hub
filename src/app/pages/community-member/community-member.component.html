@@ -1,0 +1,30 @@
+<div class="container mt-4" *ngIf="developer">
+    <div class="card shadow-sm">
+      <div class="row g-0">
+        <div class="col-md-4 d-flex align-items-center justify-content-center p-3">
+          <img [src]="developer.img || 'assets/default-profile.png'" 
+               alt="{{developer.name}}" 
+               class="img-fluid rounded-circle" 
+               style="max-width: 180px; max-height: 180px;">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h3 class="card-title">{{ developer.name }}</h3>
+            <h5 class="text-muted mb-3">{{ developer.role }}</h5>
+            <p><strong>Email:</strong> <a href="mailto:{{developer.email}}">{{ developer.email }}</a></p>
+            <p><strong>ID:</strong> {{ developer.id }}</p>
+            <p><strong>SKILLS:</strong> {{ developer.skills }}</p>
+  
+            <a routerLink="/developer-directory" class="btn btn-primary mt-3">Geri Dön</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <div *ngIf="!developer" class="text-center mt-5">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>

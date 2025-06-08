@@ -1,0 +1,41 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "user1",
+      "password": "1234",
+      "token": "token123"
+    },
+    {
+      "id": "2",
+      "username": "user2",
+      "password": "abcd",
+      "token": "token456"
+    },
+    {
+      "id": "47bf",
+      "username": "user1",
+      "password": "1234"
+    },
+    {
+      "id": "fe16",
+      "username": "user1",
+      "password": "1234"
+    },
+    {
+      "id": "8064",
+      "username": "user1",
+      "password": "1234"
+    },
+    {
+      "id": "e522",
+      "username": "user1",
+      "password": "1234"
+    },
+    {
+      "id": "e21b",
+      "username": "user1",
+      "password": "1234"
+    }
+  ]
+}

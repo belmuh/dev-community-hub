@@ -1,0 +1,9 @@
+<div class="card text-center h-100">  <!-- h-100 ile col yüksekliği eşitlenir -->
+  <img src="{{imageUrl}}" class="card-img-top mx-auto rounded-circle mt-3" style="width:100px; height:100px; object-fit:cover;" alt="Profil resmi">
+  <div class="card-body">
+    <h5 class="card-title">{{name}}</h5>
+    <p class="card-text"><strong>Email:</strong> {{email}}</p>
+    <p class="card-text"><strong>Role:</strong> {{role}}</p>
+    <a [routerLink]="['/community-member', id]">Detay</a>
+  </div>
+</div>

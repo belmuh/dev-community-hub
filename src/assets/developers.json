@@ -1,0 +1,50 @@
+[
+    {
+      "id": 1,
+      "name": "Ayşe Yılmaz",
+      "role": "frontend",
+      "email": "ayse@gmail.com",  
+      "imageUrl": "/assets/images/1.png",
+      "skills": "Java, Oracle, AWS, Python"
+    },
+    {
+      "id": 2,
+      "name": "Mehmet Demir",
+      "role": "backend",
+      "email": "amede@gmail.com",  
+      "imageUrl": "/assets/images/1.png" ,
+      "skills": " Python"
+    },
+    {
+      "id": 3,
+      "name": "Zeynep Koç",
+      "role": "fullstack",
+      "email": "koce@gmail.com",  
+      "imageUrl": "/assets/images/1.png" ,
+      "skills": "Java"
+    },
+    {
+      "id": 4,
+      "name": "Ahmet Kaya",
+      "role": "devops",
+      "email": "ahmet@gmail.com",  
+      "imageUrl": "/assets/images/1.png" ,
+      "skills": "Java, AWS, Python"
+    },
+    {
+      "id": 5,
+      "name": "Selin Kurt",
+      "role": "mimar",
+      "email": "kuer@gmail.com",  
+      "imageUrl": "/assets/images/1.png", 
+      "skills": "Java, Oracle, AWS, Python"
+    },
+    {
+      "id": 6,
+      "name": "Ali Çetin",
+      "role": "frontend",
+      "email": "ali@gmail.com",  
+      "imageUrl": "/assets/images/1.png" ,
+      "skills": "Java, Oracle, Python"
+    }
+  ]
