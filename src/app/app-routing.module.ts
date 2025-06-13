@@ -5,14 +5,26 @@ import { CommunityMemberComponent } from './pages/community-member/community-mem
 import { AuthGuard } from './auth/auth.guard';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/login/login.component';
+import { DevelopersPageComponent } from './pages/developers-page/developers-page.component';
 
 const routes: Routes = [
-  { path: 'developer-directory', component: DeveloperDirectoryComponent, canActivate: [AuthGuard] },
-  { path: 'developer-directory/:role', component: DeveloperDirectoryComponent, canActivate: [AuthGuard] },
+  {
+    path: 'developers',
+    component: DevelopersPageComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'developers/:id',
+    component: DevelopersPageComponent,
+    canActivate: [AuthGuard]
+  },
   { path: 'community-member/:id', component: CommunityMemberComponent },
-  { path: 'login', component: LoginComponent },
-  { path: '', redirectTo: 'developer-directory', pathMatch: 'full' },
-  { path: '**', redirectTo: 'login' }
+  { path: '', redirectTo: 'developers', pathMatch: 'full' },
+  { path: '**', redirectTo: 'developers' } // 404 fallback
 ];
 
 

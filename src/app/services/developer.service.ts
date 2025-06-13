@@ -16,13 +16,21 @@ export class DeveloperService {
   
   getDevelopers(): Observable<Developer[]> {
     return this.http.get<any[]>(this.apiUrl).pipe(
-      map(users => users.map(u => new Developer(u.id, u.name, u.email, u.role, u.imageUrl, u.skills)))
+      map(users => users.map(u => new Developer(u.id, 
+                                                u.name, 
+                                                u.email, 
+                                                u.role, 
+                                                u.imageUrl, 
+                                                u.videoUrls, 
+                                                u.expertise, 
+                                                u.technologies, 
+                                                u.experience,
+                                                u.location,
+                                                u.description)))
     );
   }
 
-
   getDeveloperById(id:number): Observable<Developer | undefined>{
-      //return this.http.get<Developer>(`${this.apiUrl}/${id}`);
       return this.getDevelopers().pipe(
         map(developers => developers.find(dev => dev.id === id))
       );

@@ -1,23 +1,7 @@
 
   <nav class="bg-light border-end vh-100" style="width: 250px;">
-    <div class="pt-3 px-3">
-      <h5>Uzmanlık Alanları</h5>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">
-          <a routerLink="/developer-directory/frontend" routerLinkActive="active" class="text-decoration-none">Frontend Developer</a>
-        </li>
-        <li class="list-group-item">
-          <a routerLink="/developer-directory/backend" routerLinkActive="active" class="text-decoration-none">Backend Developer</a>
-        </li>
-        <li class="list-group-item">
-          <a routerLink="/developer-directory/fullstack" routerLinkActive="active" class="text-decoration-none">Full Stack Developer</a>
-        </li>
-        <li class="list-group-item">
-          <a routerLink="/developer-directory/devops" routerLinkActive="active" class="text-decoration-none">DevOps Mühendisi</a>
-        </li>
-        <li class="list-group-item">
-          <a routerLink="/developer-directory/architect" routerLinkActive="active" class="text-decoration-none">Yazılım Mimarı</a>
-        </li>
-      </ul>
-    </div>
+    <h5>Filtreler</h5>
+
+
+    <button class="btn btn-outline-secondary btn-sm mt-2" (click)="resetFilters()">Filtreleri Sıfırla</button>
   </nav>

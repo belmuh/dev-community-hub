@@ -12,6 +12,10 @@ import { LoginComponent } from './auth/login/login.component';
 import { DeveloperDirectoryComponent } from './pages/developer-directory/developer-directory.component';
 import { Developer } from './models/developer.model';
 import { CommunityMemberComponent } from './pages/community-member/community-member.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { DevelopersPageComponent } from './pages/developers-page/developers-page.component';
+import { DeveloperFiltersComponent } from './pages/developer-filters/developer-filters.component';
+import { DeveloperDetailComponent } from './pages/developer-detail/developer-detail.component';
 
 
 @NgModule({
@@ -22,7 +26,11 @@ import { CommunityMemberComponent } from './pages/community-member/community-mem
     ProfileCardComponent,
     LoginComponent,
     DeveloperDirectoryComponent,
-    CommunityMemberComponent
+    CommunityMemberComponent,
+    FooterComponent,
+    DevelopersPageComponent,
+    DeveloperFiltersComponent,
+    DeveloperDetailComponent
   ],
   imports: [
     BrowserModule,

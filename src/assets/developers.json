@@ -1,50 +1,345 @@
-[
+
+
+   [
     {
       "id": 1,
       "name": "Ayşe Yılmaz",
       "role": "frontend",
-      "email": "ayse@gmail.com",  
+      "email": "ayse@gmail.com",
       "imageUrl": "/assets/images/1.png",
-      "skills": "Java, Oracle, AWS, Python"
+      "videoUrls": [
+        "https://www.youtube.com/watch?v=hAig-DpctT0",
+        "https://www.youtube.com/watch?v=hAig-DpctT0"
+      ],
+      "skills": "Java, Oracle, AWS, Python",
+      "expertise": "Backend Developer",
+      "technologies": [".NET Core", "C#", "Azure"],
+      "experience": "Senior (6+ Yıl)",
+      "location": "İstanbul",
+      "description": "8+ yıl deneyimli .NET geliştiricisi. Enterprise uygulamalar ve mikroservis mimarileri üzerine uzmanlaşmış."
     },
     {
       "id": 2,
       "name": "Mehmet Demir",
       "role": "backend",
-      "email": "amede@gmail.com",  
-      "imageUrl": "/assets/images/1.png" ,
-      "skills": " Python"
+      "email": "amede@gmail.com",
+      "imageUrl": "https://picsum.photos/200/300?random=2",
+      "videoUrls": [
+        "https://www.youtube.com/watch?v=video2a",
+        "https://www.youtube.com/watch?v=video2b"
+      ],
+      "skills": "Python",
+      "expertise": "Frontend Developer",
+      "technologies": ["Angular", "TypeScript"],
+      "experience": "Junior (0-2 Yıl)",
+      "location": "Remote",
+      "description": "Kubernetes, Istio ve Docker ile ölçeklenebilir servis mimarileri geliştiren mühendis."
     },
     {
       "id": 3,
       "name": "Zeynep Koç",
       "role": "fullstack",
-      "email": "koce@gmail.com",  
-      "imageUrl": "/assets/images/1.png" ,
-      "skills": "Java"
+      "email": "koce@gmail.com",
+      "imageUrl": "https://picsum.photos/200/300?random=3",
+      "videoUrls": [
+        "https://www.youtube.com/watch?v=video3a",
+        "https://www.youtube.com/watch?v=video3b"
+      ],
+      "skills": "Java",
+      "expertise": "Frontend Developer",
+      "technologies": ["Angular", "TypeScript"],
+      "experience": "Mid-Level (3-5 Yıl)",
+      "location": "Remote",
+      "description": "Event-driven mimariler ve distributed tracing konularında uzman."
     },
     {
       "id": 4,
       "name": "Ahmet Kaya",
       "role": "devops",
-      "email": "ahmet@gmail.com",  
-      "imageUrl": "/assets/images/1.png" ,
-      "skills": "Java, AWS, Python"
+      "email": "ahmet@gmail.com",
+      "imageUrl": "https://picsum.photos/200/300?random=4",
+      "videoUrls": [
+        "https://www.youtube.com/watch?v=video4a",
+        "https://www.youtube.com/watch?v=video4b"
+      ],
+      "skills": "AWS, Docker, Kubernetes",
+      "expertise": "DevOps Engineer",
+      "technologies": ["Terraform", "Ansible", "Jenkins"],
+      "experience": "Lead/Manager (8+ Yıl)",
+      "location": "İstanbul",
+      "description": "10+ yıl tecrübeli, AWS üzerinde mikroservis mimarileri tasarlayan yazılım mimarı."
     },
     {
       "id": 5,
       "name": "Selin Kurt",
       "role": "mimar",
-      "email": "kuer@gmail.com",  
-      "imageUrl": "/assets/images/1.png", 
-      "skills": "Java, Oracle, AWS, Python"
+      "email": "kuer@gmail.com",
+      "imageUrl": "https://picsum.photos/200/300?random=5",
+      "videoUrls": [
+        "https://www.youtube.com/watch?v=video5a",
+        "https://www.youtube.com/watch?v=video5b"
+      ],
+      "skills": "Java, Spring Boot, Kubernetes",
+      "expertise": "Software Architect",
+      "technologies": [".NET Core", "C#", "Azure"],
+      "experience": "Senior (6+ Yıl)",
+      "location": "Remote",
+      "description": "Bulut tabanlı uygulamalar ve mikroservis mimarileri konusunda 10+ yıl deneyimli yazılım mimarı."
     },
     {
       "id": 6,
       "name": "Ali Çetin",
       "role": "frontend",
-      "email": "ali@gmail.com",  
-      "imageUrl": "/assets/images/1.png" ,
-      "skills": "Java, Oracle, Python"
+      "email": "ali@gmail.com",
+      "imageUrl": "https://picsum.photos/200/300?random=6",
+      "videoUrls": [
+        "https://www.youtube.com/watch?v=video6a",
+        "https://www.youtube.com/watch?v=video6b"
+      ],
+      "skills": "React, JavaScript, CSS",
+      "expertise": "Frontend Developer",
+      "technologies": ["React", "Vue.js", "SASS"],
+      "experience": "Mid-Level (3-5 Yıl)",
+      "location": "İstanbul",
+      "description": "React ve Vue.js ile modern frontend uygulamaları geliştiren mühendis."
+    },
+    {
+      "id": 7,
+      "name": "Emre Yıldız",
+      "role": "backend",
+      "email": "emre@gmail.com",
+      "imageUrl": "https://picsum.photos/200/300?random=7",
+      "videoUrls": [
+        "https://www.youtube.com/watch?v=video7a",
+        "https://www.youtube.com/watch?v=video7b"
+      ],
+      "skills": "Node.js, Express, MongoDB",
+      "expertise": "Backend Developer",
+      "technologies": ["Node.js", "Express", "MongoDB"],
+      "experience": "Junior (0-2 Yıl)",
+      "location": "Remote",
+      "description": "Node.js ile RESTful API'ler geliştiren yeni mezun yazılım geliştirici."
+    },
+    {
+      "id": 8,
+      "name": "Fatma Demirtaş",
+      "role": "frontend",
+      "email": "fatma@gmail.com",
+      "imageUrl": "https://picsum.photos/200/300?random=8",
+      "videoUrls": [
+        "https://www.youtube.com/watch?v=video8a",
+        "https://www.youtube.com/watch?v=video8b"
+      ],
+      "skills": "HTML, CSS, JavaScript",
+      "expertise": "Frontend Developer",
+      "technologies": ["HTML5", "CSS3", "JavaScript"],
+      "experience": "Mid-Level (3-5 Yıl)",
+      "location": "İstanbul",
+      "description": "HTML5 ve CSS3 ile duyarlı web sayfaları tasarlayan geliştirici."
+    },
+    {
+      "id": 9,
+      "name": "Burak Şahin",
+      "role": "fullstack",
+      "email": "burak@gmail.com",
+      "imageUrl": "https://picsum.photos/200/300?random=9",
+      "videoUrls": [
+        "https://www.youtube.com/watch?v=video9a",
+        "https://www.youtube.com/watch?v=video9b"
+      ],
+      "skills": "JavaScript, Node.js, React",
+      "expertise": "Fullstack Developer",
+      "technologies": ["React", "Node.js", "MongoDB"],
+      "experience": "Senior (6+ Yıl)",
+      "location": "Remote",
+      "description": "React ve Node.js kullanarak tam yığın uygulamaları geliştiren mühendis."
+    },
+    {
+      "id": 10,
+      "name": "Cemre Arslan",
+      "role": "devops",
+      "email": "cemre@gmail.com",
+      "imageUrl": "https://picsum.photos/200/300?random=10",
+      "videoUrls": [
+        "https://www.youtube.com/watch?v=video10a",
+        "https://www.youtube.com/watch?v=video10b"
+      ],
+      "skills": "AWS, Docker, Kubernetes",
+      "expertise": "DevOps Engineer",
+      "technologies": ["Terraform", "Ansible", "Jenkins"],
+      "experience": "Lead/Manager (8+ Yıl)",
+      "location": "İstanbul",
+      "description": "AWS üzerinde mikroservis mimarileri tasarlayan yazılım mimarı."
+    },
+    {
+      "id": 11,
+      "name": "Deniz Yılmaz",
+      "role": "frontend",
+      "email": "deniz@gmail.com",
+      "imageUrl": "https://picsum.photos/200/300?random=11",
+      "videoUrls": [
+        "https://www.youtube.com/watch?v=video11a",
+        "https://www.youtube.com/watch?v=video11b"
+      ],
+      "skills": "React, JavaScript, CSS",
+      "expertise": "Frontend Developer",
+      "technologies": ["React", "Vue.js", "SASS"],
+      "experience": "Mid-Level (3-5 Yıl)",
+      "location": "İzmir",
+      "description": "React ve Vue.js ile modern frontend uygulamaları geliştiren mühendis."
+    },
+    {
+      "id": 12,
+      "name": "Gökhan Demir",
+      "role": "backend",
+      "email": "gokhan@gmail.com",
+      "imageUrl": "https://picsum.photos/200/300?random=12",
+      "videoUrls": [
+        "https://www.youtube.com/watch?v=video12a",
+        "https://www.youtube.com/watch?v=video12b"
+      ],
+      "skills": "Node.js, Express, MongoDB",
+      "expertise": "Backend Developer",
+      "technologies": ["Node.js", "Express", "MongoDB"],
+      "experience": "Junior (0-2 Yıl)",
+      "location": "İstanbul",
+      "description": "Node.js ile RESTful API'ler geliştiren yeni mezun yazılım geliştirici."
+    },
+    {
+      "id": 13,
+      "name": "Hüseyin Koç",
+      "role": "fullstack",
+      "email": "huseyin@gmail.com",
+      "imageUrl": "https://picsum.photos/200/300?random=13",
+      "videoUrls": [
+        "https://www.youtube.com/watch?v=video13a",
+        "https://www.youtube.com/watch?v=video13b"
+      ],
+      "skills": "JavaScript, Node.js, React",
+      "expertise": "Fullstack Developer",
+      "technologies": ["React", "Node.js", "MongoDB"],
+      "experience": "Senior (6+ Yıl)",
+      "location": "Ankara",
+      "description": "React ve Node.js kullanarak tam yığın uygulamaları geliştiren mühendis."
+    },
+    {
+      "id": 14,
+      "name": "Aylin Yıldız",
+      "role": "devops",
+      "email": "aylin@gmail.com",
+      "imageUrl": "https://picsum.photos/200/300?random=14",
+      "videoUrls": [
+        "https://www.youtube.com/watch?v=video14a",
+        "https://www.youtube.com/watch?v=video14b"
+      ],
+      "skills": "AWS, Docker, Kubernetes",
+      "expertise": "DevOps Engineer",
+      "technologies": ["Terraform", "Ansible", "Jenkins"],
+      "experience": "Lead/Manager (8+ Yıl)",
+      "location": "İstanbul",
+      "description": "AWS üzerinde mikroservis mimarileri tasarlayan yazılım mimarı."
+    },
+    {
+      "id": 15,
+      "name": "Merve Arslan",
+      "role": "frontend",
+      "email": "merve@gmail.com",
+      "imageUrl": "https://picsum.photos/200/300?random=15",
+      "videoUrls": [
+        "https://www.youtube.com/watch?v=video15a",
+        "https://www.youtube.com/watch?v=video15b"
+      ],
+      "skills": "HTML, CSS, JavaScript",
+      "expertise": "Frontend Developer",
+      "technologies": ["HTML5", "CSS3", "JavaScript"],
+      "experience": "Mid-Level (3-5 Yıl)",
+      "location": "İzmir",
+      "description": "HTML5 ve CSS3 ile duyarlı web sayfaları tasarlayan geliştirici."
+    },
+    {
+      "id": 16,
+      "name": "Serkan Aydın",
+      "role": "backend",
+      "email": "serkan@gmail.com",
+      "imageUrl": "https://picsum.photos/200/300?random=16",
+      "videoUrls": [
+        "https://www.youtube.com/watch?v=video16a",
+        "https://www.youtube.com/watch?v=video16b"
+      ],
+      "skills": "Node.js, Express, MongoDB",
+      "expertise": "Backend Developer",
+      "technologies": ["Node.js", "Express", "MongoDB"],
+      "experience": "Junior (0-2 Yıl)",
+      "location": "İstanbul",
+      "description": "Node.js ile RESTful API'ler geliştiren yeni mezun yazılım geliştirici."
+    },
+    {
+      "id": 17,
+      "name": "Elif Doğan",
+      "role": "fullstack",
+      "email": "elif@gmail.com",
+      "imageUrl": "https://picsum.photos/200/300?random=17",
+      "videoUrls": [
+        "https://www.youtube.com/watch?v=video17a",
+        "https://www.youtube.com/watch?v=video17b"
+      ],
+      "skills": "JavaScript, Node.js, React",
+      "expertise": "Fullstack Developer",
+      "technologies": ["React", "Node.js", "MongoDB"],
+      "experience": "Senior (6+ Yıl)",
+      "location": "Remote",
+      "description": "React ve Node.js kullanarak tam yığın uygulamaları geliştiren mühendis."
+    },
+    {
+      "id": 18,
+      "name": "Özgür Çelik",
+      "role": "devops",
+      "email": "ozgur@gmail.com",
+      "imageUrl": "https://picsum.photos/200/300?random=18",
+      "videoUrls": [
+        "https://www.youtube.com/watch?v=video18a",
+        "https://www.youtube.com/watch?v=video18b"
+      ],
+      "skills": "AWS, Docker, Kubernetes",
+      "expertise": "DevOps Engineer",
+      "technologies": ["Terraform", "Ansible", "Jenkins"],
+      "experience": "Lead/Manager (8+ Yıl)",
+      "location": "İstanbul",
+      "description": "AWS üzerinde mikroservis mimarileri tasarlayan yazılım mimarı."
+    },
+    {
+      "id": 19,
+      "name": "Derya Tekin",
+      "role": "frontend",
+      "email": "derya@gmail.com",
+      "imageUrl": "https://picsum.photos/200/300?random=19",
+      "videoUrls": [
+        "https://www.youtube.com/watch?v=video19a",
+        "https://www.youtube.com/watch?v=video19b"
+      ],
+      "skills": "React, JavaScript, CSS",
+      "expertise": "Frontend Developer",
+      "technologies": ["React", "Vue.js", "SASS"],
+      "experience": "Mid-Level (3-5 Yıl)",
+      "location": "Ankara",
+      "description": "React ve Vue.js ile modern frontend uygulamaları geliştiren mühendis."
+    },
+    {
+      "id": 20,
+      "name": "Okan Aslan",
+      "role": "backend",
+      "email": "okan@gmail.com",
+      "imageUrl": "https://picsum.photos/200/300?random=20",
+      "videoUrls": [
+        "https://www.youtube.com/watch?v=video20a",
+        "https://www.youtube.com/watch?v=video20b"
+      ],
+      "skills": "Node.js, Express, MongoDB",
+      "expertise": "Backend Developer",
+      "technologies": ["Node.js", "Express", "MongoDB"],
+      "experience": "Junior (0-2 Yıl)",
+      "location": "İstanbul",
+      "description": "Node.js ile RESTful API'ler geliştiren yeni mezun yazılım geliştirici."
     }
   ]
+  

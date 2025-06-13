@@ -1,0 +1,26 @@
+<div class="container-fluid">
+<div class="row">
+  <ng-container *ngIf="!selectedDeveloper; else detailTemplate">
+    <div class="col-md-3  border-end" >
+      <developer-filters
+        (filtersChanged)="onFiltersChanged($event)">
+      </developer-filters>
+    </div>
+    <div class="col-md-9">
+      <developer-directory
+        [filters]="filters"
+        (selectDeveloper)="onSelectDeveloper($event)">
+      </developer-directory>
+    </div>
+  </ng-container>
+
+  <ng-template #detailTemplate>
+    <div class="col-12">
+      <developer-detail
+        [developer]="selectedDeveloper"
+        (back)="onBackToList()">
+      </developer-detail>
+    </div>
+  </ng-template>
+</div>
+</div>
