@@ -20,7 +20,7 @@ export class LoginComponent {
   onLogin(){
     this.authService.login(this.username, this.password).subscribe({
       next: token => {
-        this.router.navigate(['/developer-directory']);
+        this.router.navigate(['/developer-page']);
       },
       error: err => {
         this.errorMessage = err.message || 'fail';

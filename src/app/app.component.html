@@ -1,12 +1,10 @@
 <ng-container *ngIf="isAuthenticated; else loginTemplate">
-  <div class="d-flex flex-column vh-100">
+  <div class="d-flex flex-column min-vh-100">
     <navbar></navbar>
-    <div class="d-flex flex-grow-1">
-      <sidebar></sidebar>
-      <main class="flex-grow-1 p-3 overflow-auto">
-        <router-outlet></router-outlet>
-      </main>
-    </div>
+    <main class="flex-grow-1">
+      <router-outlet></router-outlet>
+    </main>
+    <app-footer></app-footer>
   </div>
 </ng-container>
 
