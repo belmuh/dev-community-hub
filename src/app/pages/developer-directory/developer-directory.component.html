@@ -1,12 +1,56 @@
 
-
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
   <div 
     class="col"
-    *ngFor="let dev of filtered"
+    *ngFor="let dev of pagedDevelopers"
     (click)="select(dev)"
     style="cursor: pointer;"
   >
     <profile-card [developer]="dev"></profile-card>
   </div>
 </div>
+
+<!-- Pagination controls -->
+<nav *ngIf="totalPages > 1" aria-label="Sayfa navigasyonu" class="mt-4">
+  <ul class="pagination justify-content-center bg-dark rounded p-2">
+    <li class="page-item" [class.disabled]="currentPage === 1">
+      <button 
+        class="page-link bg-dark text-light border-0" 
+        (click)="prevPage()" 
+        [disabled]="currentPage === 1"
+        aria-label="Önceki sayfa"
+      >
+        &laquo;
+      </button>
+    </li>
+
+    <li 
+      class="page-item" 
+      *ngFor="let page of [].constructor(totalPages); let i = index" 
+      [class.active]="currentPage === i + 1"
+    >
+      <button 
+        class="page-link border-0"
+        [ngClass]="{
+          'bg-primary text-white': currentPage === i + 1,
+          'bg-dark text-light': currentPage !== i + 1
+        }"
+        (click)="goToPage(i + 1)"
+        [attr.aria-current]="currentPage === i + 1 ? 'page' : null"
+      >
+        {{ i + 1 }}
+      </button>
+    </li>
+
+    <li class="page-item" [class.disabled]="currentPage === totalPages">
+      <button 
+        class="page-link bg-dark text-light border-0" 
+        (click)="nextPage()" 
+        [disabled]="currentPage === totalPages"
+        aria-label="Sonraki sayfa"
+      >
+        &raquo;
+      </button>
+    </li>
+  </ul>
+</nav>

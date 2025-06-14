@@ -16,6 +16,7 @@ export class DeveloperDetailComponent{
   goBack() {
     this.back.emit();
   }
+  
   edit() {
     if(this.developer){
       this.router.navigate(['community-member', this.developer.id]);
