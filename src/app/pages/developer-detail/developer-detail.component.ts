@@ -1,6 +1,6 @@
 import { Component, OnInit, Input,Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 import { Developer } from 'src/app/models/developer.model';
-import { DeveloperService } from 'src/app/services/developer.service';
 
 @Component({
   selector: 'developer-detail',
@@ -11,8 +11,15 @@ export class DeveloperDetailComponent{
   @Input() developer!: Developer | null;
   @Output() back = new EventEmitter<void>();
 
+  constructor(private router:Router){}
+
   goBack() {
     this.back.emit();
+  }
+  edit() {
+    if(this.developer){
+      this.router.navigate(['community-member', this.developer.id]);
+    }
   }
   getYoutubeThumbnail(url: string): string {
     let videoId = '';

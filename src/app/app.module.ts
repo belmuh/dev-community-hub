@@ -16,6 +16,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { DevelopersPageComponent } from './pages/developers-page/developers-page.component';
 import { DeveloperFiltersComponent } from './pages/developer-filters/developer-filters.component';
 import { DeveloperDetailComponent } from './pages/developer-detail/developer-detail.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { DeveloperDetailComponent } from './pages/developer-detail/developer-det
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

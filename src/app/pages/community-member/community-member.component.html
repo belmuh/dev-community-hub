@@ -1,30 +1,122 @@
-<div class="container mt-4" *ngIf="developer">
-    <div class="card shadow-sm">
-      <div class="row g-0">
-        <div class="col-md-4 d-flex align-items-center justify-content-center p-3">
-          <img [src]="developer.imageUrl || 'assets/default-profile.png'" 
-               alt="{{developer.name}}" 
-               class="img-fluid rounded-circle" 
-               style="max-width: 180px; max-height: 180px;">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h3 class="card-title">{{ developer.name }}</h3>
-            <h5 class="text-muted mb-3">{{ developer.role }}</h5>
-            <p><strong>Email:</strong> <a href="mailto:{{developer.email}}">{{ developer.email }}</a></p>
-            <p><strong>ID:</strong> {{ developer.id }}</p>
-          
-  
-            <a routerLink="/developer-directory" class="btn btn-primary mt-3">Geri Dön</a>
+<div class="container my-1 d-flex justify-content-center">
+  <form [formGroup]="memberForm" (ngSubmit)="submitForm()" 
+        class="card h-100 bg-gradient bg-dark text-light shadow rounded-4 border-0 overflow-hidden p-4" 
+        style="max-width: 800px;">
+
+    <h4 class="mb-4 text-center fw-bold">Community Member Edit</h4>
+
+    <div class="row g-3">
+      <div class="col-md-6">
+        <label for="name" class="form-label">Ad Soyad</label>
+        <input id="name" formControlName="name" type="text" 
+               class="form-control bg-secondary bg-opacity-25 text-light border-0 rounded-3" 
+               placeholder="Ad Soyad" />
+      </div>
+
+      <div class="col-md-6">
+        <label for="role" class="form-label">Rol</label>
+        <input id="role" formControlName="role" type="text" 
+               class="form-control bg-secondary bg-opacity-25 text-light border-0 rounded-3" 
+               placeholder="Rol" />
+      </div>
+
+      <div class="col-md-6">
+        <label for="email" class="form-label">Email</label>
+        <input id="email" formControlName="email" type="email" 
+               class="form-control bg-secondary bg-opacity-25 text-light border-0 rounded-3" 
+               placeholder="Email" />
+      </div>
+
+      <div class="col-md-6">
+        <label for="location" class="form-label">Lokasyon</label>
+        <input id="location" formControlName="location" type="text" 
+               class="form-control bg-secondary bg-opacity-25 text-light border-0 rounded-3" 
+               placeholder="İstanbul" />
+      </div>
+
+      <div class="col-md-6">
+        <label for="expertise" class="form-label">Uzmanlık</label>
+        <input id="expertise" formControlName="expertise" type="text" 
+               class="form-control bg-secondary bg-opacity-25 text-light border-0 rounded-3" 
+               placeholder="Backend Developer" />
+      </div>
+
+      <div class="col-md-6">
+        <label for="experience" class="form-label">Deneyim</label>
+        <select id="experience" formControlName="experience" 
+                class="form-select bg-secondary bg-opacity-25 text-light border-0 rounded-3">
+          <option>Junior (0-2 Yıl)</option>
+          <option>Mid-Level (3-5 Yıl)</option>
+          <option>Senior (6+ Yıl)</option>
+        </select>
+      </div>
+
+      <div class="col-md-12">
+        <label for="skills" class="form-label">Yetenekler (Skills)</label>
+        <input id="skills" formControlName="skills" type="text" 
+               class="form-control bg-secondary bg-opacity-25 text-light border-0 rounded-3" 
+               placeholder="Java, Oracle, AWS, Python" />
+      </div>
+
+      <div class="col-md-12">
+        <label for="imageUrl" class="form-label">Profil Resim URL</label>
+        <input id="imageUrl" formControlName="imageUrl" type="text" 
+               class="form-control bg-secondary bg-opacity-25 text-light border-0 rounded-3" 
+               placeholder="Profil Resim URL" />
+      </div>
+
+      <div class="col-md-12">
+        <label class="form-label">Video URL’leri</label>
+        <div formArrayName="videoUrls">
+          <div *ngFor="let video of videoUrls.controls; let i = index" class="input-group mb-2">
+            <input [formControlName]="i" type="url" 
+                   class="form-control bg-secondary bg-opacity-25 text-light border-0 rounded-start" 
+                   placeholder="Video URL" />
+            <button type="button" class="btn btn-outline-danger rounded-end" (click)="removeVideoUrl(i)" aria-label="Sil video URL">&times;</button>
           </div>
+          <button type="button" class="btn btn-outline-info btn-sm mt-1" (click)="addVideoUrl()">+ Yeni Video URL Ekle</button>
         </div>
       </div>
-    </div>
-  </div>
-  
 
-  <div *ngIf="!developer" class="text-center mt-5">
-    <div class="spinner-border text-primary" role="status">
-      <span class="visually-hidden">Loading...</span>
+      <!-- Teknolojiler bölümü (otomatik tamamlama + badge listesi) -->
+      <div class="col-md-12 position-relative">
+        <label class="form-label">Teknolojiler</label>
+
+        <div class="d-flex flex-wrap gap-2 mb-2">
+          <span *ngFor="let tech of technologies.value; let i = index" 
+                class="badge bg-secondary text-light me-2 mb-2 px-3 py-1 rounded-pill d-flex align-items-center">
+            {{ tech }}
+            <button type="button" class="btn-close btn-close-white btn-sm ms-2" aria-label="Kaldır" (click)="removeTechnology(i)"></button>
+          </span>
+        </div>
+
+        <input type="text" 
+               [formControl]="technologyInput" 
+               (keydown.enter)="addTechnologyByInput($event)" 
+               (keydown.shift.enter)="$event.preventDefault()" 
+               class="form-control bg-secondary bg-opacity-25 text-light border-0 rounded-3" 
+               placeholder="Yeni teknoloji ekle ve Enter'a bas" 
+               autocomplete="off" />
+
+        <ul *ngIf="filteredTechnologies.length > 0" 
+            class="list-group position-absolute bg-dark w-100 mt-1 rounded shadow" 
+            style="max-height: 150px; overflow-y: auto; z-index: 1000;">
+          <li *ngFor="let tech of filteredTechnologies" 
+              class="list-group-item list-group-item-action bg-secondary text-light py-1 px-3" 
+              style="cursor: pointer;"
+              (click)="selectTechnology(tech)">
+            {{ tech }}
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-md-12">
+        <label for="description" class="form-label">Açıklama</label>
+        <textarea id="description" formControlName="description" rows="4" 
+                  class="form-control bg-secondary bg-opacity-25 text-light border-0 rounded-3" placeholder="Açıklama"></textarea>
+      </div>
     </div>
-  </div>
+
+    <button type="submit" class="btn btn-outline-info w-100 mt-4">Kaydet</button>
+  </form>
+</div>
