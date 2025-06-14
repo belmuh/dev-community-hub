@@ -4,7 +4,7 @@ import { Developer } from 'src/app/models/developer.model';
 import { DeveloperService } from 'src/app/services/developer.service';
 
 @Component({
-  selector: 'app-developers-page',
+  selector: 'developers-page',
   templateUrl: './developers-page.component.html',
   styleUrls: ['./developers-page.component.css']
 })
