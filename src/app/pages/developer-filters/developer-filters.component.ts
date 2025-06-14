@@ -1,11 +1,11 @@
-import { Component, Input, Output, EventEmitter} from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit} from '@angular/core';
 
 @Component({
   selector: 'developer-filters',
   templateUrl: './developer-filters.component.html',
   styleUrls: ['./developer-filters.component.css']
 })
-export class DeveloperFiltersComponent {
+export class DeveloperFiltersComponent implements OnInit{
   filters = {
     expertise: [] as string[],
     technologies: [] as string[],
@@ -23,7 +23,13 @@ export class DeveloperFiltersComponent {
     location: ['İstanbul', 'Ankara', 'İzmir', 'Remote']
   };
 
+  selectedFilters: { [key: string]: Set<string> } = {};
 
+  ngOnInit() {
+    for (const key of Object.keys(this.filterOptions)) {
+      this.selectedFilters[key] = new Set<string>();
+    }
+   }
 
     toggleFilter(category: string, value: string) {
       const key = category as keyof typeof this.filters;
@@ -37,6 +43,34 @@ export class DeveloperFiltersComponent {
         experience: [...this.filters.experience],
         location: [...this.filters.location]
       });
+
+      const set = this.selectedFilters[category];
+  if (set.has(value)) {
+    set.delete(value);
+  } else {
+    set.add(value);
+  }
     
   }
+
+  resetFilters(): void {
+    this.filters = {
+      expertise: [],
+      technologies: [],
+      experience: [],
+      location: []
+    };
+  
+    this.filtersChanged.emit({
+      expertise: [],
+      technologies: [],
+      experience: [],
+      location: []
+    });
+
+    for (const key in this.selectedFilters) {
+      this.selectedFilters[key].clear();
+    }
+  }
+  
 }

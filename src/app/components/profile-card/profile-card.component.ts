@@ -14,7 +14,7 @@ export class ProfileCardComponent {
 
   viewProfile(){
     console.log(this.developer.id);
-    this.router.navigate(['/developers', this.developer.id]);
+    this.router.navigate(['/developers/:id', this.developer.id]);
   }
 
 }
