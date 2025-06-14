@@ -3,9 +3,10 @@ import { Developer } from 'src/app/models/developer.model';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'profile-card',
-  templateUrl: './profile-card.component.html',
-  styleUrls: ['./profile-card.component.css']
+    selector: 'profile-card',
+    templateUrl: './profile-card.component.html',
+    styleUrls: ['./profile-card.component.css'],
+    standalone: false
 })
 export class ProfileCardComponent {
   @Input() developer!: Developer;

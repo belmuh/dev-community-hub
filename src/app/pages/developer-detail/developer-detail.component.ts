@@ -3,9 +3,10 @@ import { Router } from '@angular/router';
 import { Developer } from 'src/app/models/developer.model';
 
 @Component({
-  selector: 'developer-detail',
-  templateUrl: './developer-detail.component.html',
-  styleUrls: ['./developer-detail.component.css']
+    selector: 'developer-detail',
+    templateUrl: './developer-detail.component.html',
+    styleUrls: ['./developer-detail.component.css'],
+    standalone: false
 })
 export class DeveloperDetailComponent{
   @Input() developer!: Developer | null;

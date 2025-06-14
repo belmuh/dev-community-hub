@@ -4,9 +4,10 @@ import { Developer } from 'src/app/models/developer.model';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'developer-directory',
-  templateUrl: './developer-directory.component.html',
-  styleUrls: ['./developer-directory.component.css']
+    selector: 'developer-directory',
+    templateUrl: './developer-directory.component.html',
+    styleUrls: ['./developer-directory.component.css'],
+    standalone: false
 })
 export class DeveloperDirectoryComponent implements OnInit {
   @Input() filters!: {

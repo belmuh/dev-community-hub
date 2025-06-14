@@ -7,9 +7,10 @@ import { DeveloperService } from 'src/app/services/developer.service';
 import { Developer } from 'src/app//models/developer.model';
 
 @Component({
-  selector: 'community-member',
-  templateUrl: './community-member.component.html',
-  styleUrls: ['./community-member.component.css']
+    selector: 'community-member',
+    templateUrl: './community-member.component.html',
+    styleUrls: ['./community-member.component.css'],
+    standalone: false
 })
 export class CommunityMemberComponent implements OnInit {
   memberForm: FormGroup;

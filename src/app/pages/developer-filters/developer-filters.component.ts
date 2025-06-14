@@ -1,9 +1,10 @@
 import { Component, Input, Output, EventEmitter, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'developer-filters',
-  templateUrl: './developer-filters.component.html',
-  styleUrls: ['./developer-filters.component.css']
+    selector: 'developer-filters',
+    templateUrl: './developer-filters.component.html',
+    styleUrls: ['./developer-filters.component.css'],
+    standalone: false
 })
 export class DeveloperFiltersComponent implements OnInit{
   filters = {

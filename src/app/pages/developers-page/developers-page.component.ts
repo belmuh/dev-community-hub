@@ -4,9 +4,10 @@ import { Developer } from 'src/app/models/developer.model';
 import { DeveloperService } from 'src/app/services/developer.service';
 
 @Component({
-  selector: 'developers-page',
-  templateUrl: './developers-page.component.html',
-  styleUrls: ['./developers-page.component.css']
+    selector: 'developers-page',
+    templateUrl: './developers-page.component.html',
+    styleUrls: ['./developers-page.component.css'],
+    standalone: false
 })
 export class DevelopersPageComponent {
   filters = {
